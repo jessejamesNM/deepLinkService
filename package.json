@@ -6,7 +6,8 @@
   "devDependencies": {},
   "dependencies": {
     "express": "^4.17.1",
-       "firebase-admin": "^11.0.0"
+    "firebase-admin": "^11.0.0",
+    "dotenv": "^10.0.0",
   },
   "scripts": {
     "start": "node server.js"
