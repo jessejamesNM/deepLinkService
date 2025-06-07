@@ -1,6 +1,8 @@
 // Importamos las dependencias necesarias
 const express = require('express');
 const firebaseAdmin = require('firebase-admin');
+const path = require('path');
+const fs = require('fs');
 require('dotenv').config();
 
 // Inicializamos Firebase con las credenciales de la variable de entorno
@@ -18,11 +20,22 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// Simulamos una base de datos de enlaces profundos en Firebase
-// Puedes agregar más enlaces profundos en la base de datos de Firebase
+// Ruta para servir apple-app-site-association con el header correcto
+app.get('/.well-known/apple-app-site-association', (req, res) => {
+  const filePath = path.join(__dirname, '.well-known', 'apple-app-site-association');
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send('Archivo AASA no encontrado');
+  }
+
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  res.setHeader('Content-Type', 'application/json');
+  res.send(fileContent);
+});
+
+// Endpoint para generar deep links
 app.get('/api/generate', async (req, res) => {
   const { linkId } = req.query;
-  
+
   // Recuperamos los enlaces desde la base de datos de Firebase
   const linkDoc = await db.collection('deepLinks').doc(linkId).get();
 
