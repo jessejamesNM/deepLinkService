@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.jesse.live_music",
+      "sha256_cert_fingerprints": [
+        "22:16:D1:D5:F9:9C:C6:C9:8D:84:DF:74:C6:74:09:DD:95:CD:6D:DF:04:95:6F:27:A1:93:81:59:D2:4B:99:A6"
+      ]
+    }
+  }
+]
