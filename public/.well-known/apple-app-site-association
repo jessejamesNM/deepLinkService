@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "3A4L9C37WT.com.jesse.live-music",
+        "appID": "com.jesse.live-music",
         "paths": [ "/*" ]
       }
     ]
