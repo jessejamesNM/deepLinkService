@@ -1,11 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.jesse.live_music",
       "sha256_cert_fingerprints": [
-        "B5:9C:1B:7E:26:AE:4A:1A:27:86:CB:CA:ED:66:96:FF:E7:E4:C4:5E:A5:38:9F:EF:D1:13:B7:F6:E5:DB:4C:B7"
+        "B5:9C:1B:7E:26:AE:4A:1A:27:86:CB:CA:ED:66:96:FF:E7:E4:C4:5E:A5:38:9F:EF:D1:13:B7:F6:E5:DB:4C:B7",
+        "40:6F:84:9F:AB:CC:F5:70:68:EB:8C:FB:83:73:A2:BD:1E:0B:C4:33:4D:C7:E4:2F:D9:97:94:80:3A:EC:8C:4B"
       ]
     }
   }
